@@ -13,7 +13,7 @@ struct HourlyRowView: View{
     var weather: Image
     var current_temp: Int
     var body: some View {
-        VStack(alignment: .center, spacing: 4){
+        VStack(alignment: .center, spacing: 6){
             Text(time)
             weather.font(.title2)
             Text("\(current_temp)°").font(.title3)

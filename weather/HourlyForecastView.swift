@@ -13,7 +13,9 @@ struct HourlyForecastView: View {
         // combines symbols and text
         VStack(alignment: .leading){
             Label("HOURLY FORECAST", systemImage: "clock")
-            
+                .font(.subheadline)
+                .fontWeight(.bold)
+                .opacity(0.9)
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 2){
                     HourlyRowView(time: "Now",weather: Image(systemName: "sun.max.fill"), current_temp: 54)
@@ -29,7 +31,7 @@ struct HourlyForecastView: View {
         .padding()
         // materials are natrual apple transparent backgrounds
        .background(RoundedRectangle(cornerRadius: 20)
-        .fill(.blue).opacity(0.8))
+        .fill(.blue).opacity(0.5))
         .padding(.horizontal,10)
        
     }
