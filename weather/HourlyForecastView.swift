@@ -17,18 +17,19 @@ struct HourlyForecastView: View {
                 .fontWeight(.bold)
                 .opacity(0.9)
             ScrollView(.horizontal, showsIndicators: false){
-                HStack(spacing: 2){
+                HStack(){
                     HourlyRowView(time: "Now",weather: Image(systemName: "sun.max.fill"), current_temp: 54)
-                    HourlyRowView(time: "1PM",weather: Image(systemName: "sun.max.fill"), current_temp: 55)
-                    HourlyRowView(time: "2PM",weather: Image(systemName: "sun.max.fill"), current_temp: 57)
-                    HourlyRowView(time: "3PM",weather: Image(systemName: "sun.max.fill"), current_temp: 54)
-                    HourlyRowView(time: "4PM",weather: Image(systemName: "sun.max.fill"), current_temp: 51)
-                    HourlyRowView(time: "5PM",weather: Image(systemName: "sun.max.fill"), current_temp: 54)
+                    HourlyRowView(time: "13",weather: Image(systemName: "sun.max.fill"), current_temp: 55)
+                    HourlyRowView(time: "14",weather: Image(systemName: "sun.max.fill"), current_temp: 57)
+                    HourlyRowView(time: "15",weather: Image(systemName: "sun.max.fill"), current_temp: 54)
+                    HourlyRowView(time: "16",weather: Image(systemName: "sun.max.fill"), current_temp: 51)
+                    HourlyRowView(time: "17",weather: Image(systemName: "sun.max.fill"), current_temp: 54)
                 }
             }
         }
         .foregroundStyle(.white)
-        .padding()
+        .padding(.vertical, 10)
+        
         // materials are natrual apple transparent backgrounds
        .background(RoundedRectangle(cornerRadius: 20)
         .fill(.blue).opacity(0.5))

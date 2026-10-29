@@ -22,13 +22,15 @@ struct ContentView: View {
                         VStack(alignment: .center) {
                             Text("Chapel Hill").font(.largeTitle)
                             Text("\(current_temp)°")
-                                .font(.system(size: 85, weight: .thin))
+                                .font(.system(size: 100, weight: .thin))
                                 .offset(x:15)
 
     
-                            Text("Sunny").font(.callout)
+                            Text("Sunny")
                                 .offset(x:3)
-                            
+                                .font(.system(size: 23, weight: .medium))
+                                .opacity(0.6)
+                        
                             Text("H: \(high_temp)° L: \(low_temp)°")
                                 .font(.system(size: 20, weight: .medium))
                         }
@@ -38,7 +40,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         
                         HourlyForecastView()
-                            .padding(.top, 50) // add spacing
+                            .padding(.top, 70) // add spacing
                         
                         WeeklyForcastView2()
                     }
